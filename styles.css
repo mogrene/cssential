@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+    line-height: 1.2;
+    letter-spacing: 0.05rem;
+    margin: 0;
+    padding: 0;
+
+    --white-wash: #f9f9f9;
+    --black-wash: #0c0c0c;
+    --grey: rgb(160, 160, 160);
+    --light-grey: rgba(255,255,255,0.1);
+    
+    --text-color: var(--white-wash);
+    --background-color: var(--black-wash);
+
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+h1 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: none;
+}
+
+h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: none;
+}
+
+h3 {
+    font-size: 1rem;
+    margin: none;
+}
+
+p {
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin: none;
+}
+
+a {
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    color: var(--text-color);
+    text-decoration: none;
+    border-bottom: 0.5px solid;
+    margin: none;
+}
+
+a:hover {
+    opacity: 0.85;
+}
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--black-wash);
+}
+
+nav {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 1rem 2rem;
+    border: 1px solid var(--light-grey);
+}
+
+nav a {
+    border: none;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 6rem 2rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--light-grey);
+}
+
+footer {
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 1200px;
+    width: 100%;
+    padding: 2rem;
+    border: 1px solid var(--light-grey);
+}
+
+footer p, a {
+    color: var(--grey);
+}
