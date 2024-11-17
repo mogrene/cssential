@@ -44,14 +44,19 @@ h3 {
 }
 
 h4 {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 300;
 }
 
 h5 {
     font-size: 0.9rem;
-    font-weight: 400;
+    font-weight: 600;
     color: var(--white-wash);
+}
+
+h6 {
+    font-size: 0.9rem;
+    font-weight: 300;
 }
 
 p {
@@ -81,6 +86,10 @@ pre {
 
 .grey {
     color: var(--light-grey);
+}
+
+.underline {
+    border-bottom: 0.5px solid;
 }
 
 header {
@@ -115,6 +124,10 @@ nav a {
     font-size: 1rem;
 }
 
+nav a:hover {
+    opacity: 1;
+}
+
 nav ul {
     display: flex;
     flex-direction: row;
@@ -135,13 +148,51 @@ nav ul li a {
     font-size: 0.9rem;
 }
 
+nav ul li a:hover {
+    opacity: 0.9;
+}
+
 main {
     max-width: 1200px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+menu {
     padding: 5rem 2rem;
+    min-width: 200px;
+    border: 0.5px solid var(--light-grey);
+}
+
+menu h5 {
+    margin-bottom: 1rem;
+}
+
+menu ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 0.5em;
+}
+
+menu ul li a {
+    text-decoration: none;
+    border: none;
+    color: var(--white-wash);
+}
+
+menu ul li a:hover {
+    border-bottom: 0.5px solid;
+    opacity: 1;
+}
+
+.container {
+    width: 100%;
+    padding: 5rem 2rem;
+    display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    display: flex;
     flex-direction: column;
     border: 1px solid var(--light-grey);
     gap: 0.5rem;
@@ -158,6 +209,12 @@ main {
     padding: 1rem 0;
 }
 
+.navigation {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+}
+
 .preview, .usage {
     display: flex;
     flex-direction: column;
@@ -166,19 +223,24 @@ main {
     margin: 1.5rem 0;
 }
 
+.preview {
+    min-height: 450px;
+}
+
 .usage {
     gap: 1rem;
 }
 
 .code-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 1rem;
     width: 100%;
 }
 
 .code-content {
-    width: 50%;
+    width: 100%;
+    max-width: 920px;
 }
 
 .codebox {
@@ -200,6 +262,7 @@ main {
     border-radius: 6px;
     padding: 3rem;
     margin: 1rem 0;
+    height: 100%;
 }
 
 /* Accordion */
@@ -237,14 +300,14 @@ label {
 
 section {
     height: 0;
-    transition: 0.25s all;
+    transition: 0.3s all;
     overflow: hidden;
 }
 
 #toggle1:checked ~ #content1,
 #toggle2:checked ~ #content2,
 #toggle3:checked ~ #content3 {
-    height: calc(15vh - 7vw);;
+    height: calc(20vh - 8vw);
 }
 
 /* Button */
@@ -305,11 +368,7 @@ footer p, a {
 }
 
 @media (max-width: 1200px) {
-    .code-container {
-        flex-direction: column;
-    }
-    
-    .code-content {
-        width: 100%;
+    menu {
+        display: none;
     }
 }
