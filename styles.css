@@ -38,7 +38,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 600;
     color: var(--white-wash);
 }
@@ -50,7 +50,7 @@ h4 {
 
 h5 {
     font-size: 0.9rem;
-    font-weight: 600;
+    font-weight: 500;
     color: var(--white-wash);
 }
 
@@ -157,12 +157,19 @@ main {
     margin: 0 auto;
     display: flex;
     flex-direction: row;
+    overflow-y: scroll;
+    min-height: 100vh;
+    border: 1px solid var(--light-grey);
 }
 
 menu {
+    position: fixed;
     padding: 5rem 2rem;
     min-width: 200px;
     border: 0.5px solid var(--light-grey);
+    height: 100%;
+    background-color: var(--black-wash);
+    z-index: 1;
 }
 
 menu h5 {
@@ -173,7 +180,6 @@ menu ul {
     display: flex;
     flex-direction: column;
     list-style: none;
-    gap: 0.5em;
 }
 
 menu ul li a {
@@ -187,15 +193,28 @@ menu ul li a:hover {
     opacity: 1;
 }
 
+.submenu {
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+}
+
+.submenu ul li a {
+    color: var(--light-grey);
+}
+
 .container {
     width: 100%;
-    padding: 5rem 2rem;
+    padding: 5rem 2rem 5rem 15rem;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
-    border: 1px solid var(--light-grey);
     gap: 0.5rem;
+    min-height: 100vh;
+}
+
+.home {
+    padding: 5rem 2rem;
 }
 
 .hero {
@@ -224,7 +243,7 @@ menu ul li a:hover {
 }
 
 .preview {
-    min-height: 450px;
+    min-height: 35vh;
 }
 
 .usage {
@@ -240,7 +259,6 @@ menu ul li a:hover {
 
 .code-content {
     width: 100%;
-    max-width: 920px;
 }
 
 .codebox {
@@ -342,7 +360,12 @@ button:hover {
     border-color: var(--white-wash);
 }
 
+#primary, #secondary, #outline {
+    scroll-margin-top: 5rem;
+}
+
 footer {
+    position: fixed;
     right: 0;
     bottom: 0;
     width: 100%;
@@ -350,6 +373,8 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    z-index: 9;
+    background-color: var(--black-wash);
 }
 
 footer container {
@@ -370,5 +395,13 @@ footer p, a {
 @media (max-width: 1200px) {
     menu {
         display: none;
+    }
+
+    .container {
+        padding: 5rem 2rem;
+    }
+
+    .preview {
+        min-height: 55vh;
     }
 }
