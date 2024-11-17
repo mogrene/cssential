@@ -25,7 +25,13 @@
                 <h5>Components</h5>
                 <ul>
                     <li><a href="/cssential/components/accordion/">Accordion</a></li>
-                    <li><a class="underline" href="/cssential/components/button/">Button</a></li>
+                    <li><a class="underline" href="/cssential/components/button/">Button</a>
+                        <ul class="submenu">
+                            <li><a href="#primary">Primary</a></li>
+                            <li><a href="#secondary">Secondary</a></li>
+                            <li><a href="#outline">Outline</a></li>
+                        </ul>
+                    </li> 
                 </ul>
             </menu>
             <div class="container">
@@ -39,7 +45,7 @@
                 
                 <!-- Primary -->
                 <div class="preview">
-                    <h3>Primary</h3>
+                    <h3 id="primary">Primary</h3>
                     <div class="card">
                         <button class="primary">
                             Button
@@ -89,7 +95,7 @@ button:hover {
 
                 <!-- Secondary -->
                 <div class="preview">
-                    <h3>Secondary</h3>
+                    <h3 id="secondary">Secondary</h3>
                     <div class="card">
                         <button class="secondary">
                             Secondary
@@ -139,7 +145,7 @@ button:hover {
 
                 <!-- Outline -->
                 <div class="preview">
-                    <h3>Outline</h3>
+                    <h3 id="outline">Outline</h3>
                     <div class="card">
                         <button class="outline">
                             Outline
