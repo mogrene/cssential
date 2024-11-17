@@ -10,49 +10,53 @@
     <body>
         <header>
             <nav>
-                <h4>
-                    <a href="/">
-                        CSSential
-                    </a>
-                </h4>
+                <a href="/" class="white">
+                    CSSential
+                </a>
+                <ul>
+                    <li><a href="/components/" class="white">Components</a></li>
+                    <li><a href="https://github.com/idematos/cssential" target="_blank">Code</a></li>
+                </ul>
             </nav>
         </header>
 
         <main>
+            <h1>Accordion</h1>
+            <h5>A vertically stacked set of interactive headings that allows content to be expanded and collapsed without using JavaScript.</h5>
             <div class="preview">
-                <h1>Accordion</h1>
-                <h5>A vertically stacked set of interactive headings that allows content to be expanded and collapsed without using JavaScript.</h5>
-
-                <div class="accordion">
-                    <div class="togglebox">
-                        <input id="toggle1" type="radio" name="toggle" />
-                        <label for="toggle1">Is it small? </label>
-                        <section id="content1">
-                            <p>Yes. It doesn't require any additional libraries, frameworks, or JavaScript files.</p>
-                        </section>
-                    </div>
-                    <div class="togglebox">
-                        <input id="toggle2" type="radio" name="toggle" />
-                        <label for="toggle2">Is it reliable?</label>
-                        <section id="content2">
-                            <p>Yes. Works well on all browsers, as it relies on fundamental CSS features. Also, it will function even if JavaScript is disabled or not supported.</p>
-                        </section>
-                    </div>
-                    <div class="togglebox">
-                        <input id="toggle3" type="radio" name="toggle" />
-                        <label for="toggle3">Is it customizable?</label>
-                        <section id="content3">
-                            <p>Yes, it is highly customizable. Developers can easily adjust colors, spacing, and animations.</p>
-                        </section>
+                <div class="card">
+                    <div class="accordion">
+                        <div class="togglebox">
+                            <input id="toggle1" type="radio" name="toggle" />
+                            <label for="toggle1">Is it small? </label>
+                            <section id="content1">
+                                <p>Yes. It doesn't require any additional libraries, frameworks, or JavaScript files.</p>
+                            </section>
+                        </div>
+                        <div class="togglebox">
+                            <input id="toggle2" type="radio" name="toggle" />
+                            <label for="toggle2">Is it reliable?</label>
+                            <section id="content2">
+                                <p>Yes. Works well on all browsers, as it relies on fundamental CSS features. Also, it will function even if JavaScript is disabled or not supported.</p>
+                            </section>
+                        </div>
+                        <div class="togglebox">
+                            <input id="toggle3" type="radio" name="toggle" />
+                            <label for="toggle3">Is it customizable?</label>
+                            <section id="content3">
+                                <p>Yes, it is highly customizable. Developers can easily adjust colors, spacing, and animations.</p>
+                            </section>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="usage">
-                <h2>Usage</h2>
-                <h4>HTML</h4>
-                <div class="codebox">
-                    <pre>
+                <div class="code-container">
+                    <div class="code-content">
+                        <h5>HTML</h5>
+                        <div class="codebox">
+                            <pre>
 &lt;div class="accordion"&gt;
     &lt;div class="togglebox"&gt;
         &lt;input id="toggle1" type="radio" name="toggle"&nbsp;/&gt;
@@ -76,12 +80,14 @@
         &lt;/section&gt;
     &lt;/div&gt;
 &lt;/div&gt;
-                    </pre>
-                </div>
+                            </pre>
+                        </div>
+                    </div>
 
-                <h4>CSS</h4>
-                <div class="codebox">
-                    <pre>
+                <div class="code-content">
+                    <h5>CSS</h5>
+                    <div class="codebox">
+                        <pre>
 .accordion {
     display: flex;
     flex-direction: column;
@@ -125,13 +131,15 @@ section {
 #toggle3:checked ~ #content3 {
     height: calc(15vh - 7vw);;
 }
-                    </pre>
-                </div>  
+                        </pre>
+                    </div>  
+                </div>
             </div>
         </main>
     </body>
     <footer>
         <container>
-            <p>Built by <a href="https://github.com/idematos">idematos</a>. The source code is available on <a href="https://github.com/idematos/cssential">GitHub</a>.</p>
+            <p>Built by <a href="https://github.com/idematos" target="_blank">idematos</a>. The source code is available on <a href="https://github.com/idematos/cssential" target="_blank">GitHub</a>.</p>
         </container>
-    </f
+    </footer>
+</html>
