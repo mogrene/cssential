@@ -173,7 +173,7 @@ menu {
 }
 
 menu h5 {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 menu ul {
@@ -239,7 +239,7 @@ menu ul li a:hover {
     flex-direction: column;
     width: 100%;
     gap: 0.5rem;
-    margin: 1.5rem 0;
+    margin: 1rem 0;
 }
 
 .preview {
@@ -267,7 +267,7 @@ menu ul li a:hover {
     background-color: var(--lighter-grey);
     padding: 1.5rem;
     font-family: var(--font-code);
-    margin: 0.5rem 0;
+    margin: 1rem 0;
     width: 100%;
 }
 
