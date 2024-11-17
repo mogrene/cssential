@@ -14,49 +14,60 @@
                     CSSential
                 </a>
                 <ul>
-                    <li><a href="/components/" class="white">Components</a></li>
+                    <li><a href="/components/accordion/" class="white">Components</a></li>
                     <li><a href="https://github.com/idematos/cssential" target="_blank">Code</a></li>
                 </ul>
             </nav>
         </header>
-
         <main>
-            <h1>Accordion</h1>
-            <h5>A vertically stacked set of interactive headings that allows content to be expanded and collapsed without using JavaScript.</h5>
-            <div class="preview">
-                <div class="card">
-                    <div class="accordion">
-                        <div class="togglebox">
-                            <input id="toggle1" type="radio" name="toggle" />
-                            <label for="toggle1">Is it small? </label>
-                            <section id="content1">
-                                <p>Yes. It doesn't require any additional libraries, frameworks, or JavaScript files.</p>
-                            </section>
-                        </div>
-                        <div class="togglebox">
-                            <input id="toggle2" type="radio" name="toggle" />
-                            <label for="toggle2">Is it reliable?</label>
-                            <section id="content2">
-                                <p>Yes. Works well on all browsers, as it relies on fundamental CSS features. Also, it will function even if JavaScript is disabled or not supported.</p>
-                            </section>
-                        </div>
-                        <div class="togglebox">
-                            <input id="toggle3" type="radio" name="toggle" />
-                            <label for="toggle3">Is it customizable?</label>
-                            <section id="content3">
-                                <p>Yes, it is highly customizable. Developers can easily adjust colors, spacing, and animations.</p>
-                            </section>
+            <menu>
+                <h5>Components</h5>
+                <ul>
+                    <li><a class="underline" href="/components/accordion/">Accordion</a></li>
+                    <li><a href="/components/button/">Button</a></li>
+                </ul>
+            </menu>
+            <div class="container">
+                <div class="navigation">
+                    <h6>Components</h6>
+                    <h6>/</h6>
+                    <h6 class="white">Accordion</h6>
+                </div>
+                <h1>Accordion</h1>
+                <h4>A vertically stacked set of interactive headings that allows content to be expanded.</h4>
+                <div class="preview">
+                    <div class="card">
+                        <div class="accordion">
+                            <div class="togglebox">
+                                <input id="toggle1" type="radio" name="toggle" />
+                                <label for="toggle1">Is it small? </label>
+                                <section id="content1">
+                                    <p>Yes. It doesn't require any additional libraries, frameworks, or JavaScript files.</p>
+                                </section>
+                            </div>
+                            <div class="togglebox">
+                                <input id="toggle2" type="radio" name="toggle" />
+                                <label for="toggle2">Is it reliable?</label>
+                                <section id="content2">
+                                    <p>Yes. Works well on all browsers, as it relies on fundamental CSS features. Also, it will function even if JavaScript is disabled or not supported.</p>
+                                </section>
+                            </div>
+                            <div class="togglebox">
+                                <input id="toggle3" type="radio" name="toggle" />
+                                <label for="toggle3">Is it customizable?</label>
+                                <section id="content3">
+                                    <p>Yes, it is highly customizable. Developers can easily adjust colors, spacing, and animations.</p>
+                                </section>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="usage">
-                <div class="code-container">
-                    <div class="code-content">
-                        <h5>HTML</h5>
-                        <div class="codebox">
-                            <pre>
+                <div class="usage">
+                    <div class="code-container">
+                        <div class="code-content">
+                            <h5>HTML</h5>
+                            <div class="codebox">
+                                <pre>
 &lt;div class="accordion"&gt;
     &lt;div class="togglebox"&gt;
         &lt;input id="toggle1" type="radio" name="toggle"&nbsp;/&gt;
@@ -80,14 +91,14 @@
         &lt;/section&gt;
     &lt;/div&gt;
 &lt;/div&gt;
-                            </pre>
+                                </pre>
+                            </div>
                         </div>
-                    </div>
 
-                <div class="code-content">
-                    <h5>CSS</h5>
-                    <div class="codebox">
-                        <pre>
+                    <div class="code-content">
+                        <h5>CSS</h5>
+                        <div class="codebox">
+                            <pre>
 .accordion {
     display: flex;
     flex-direction: column;
@@ -131,8 +142,9 @@ section {
 #toggle3:checked ~ #content3 {
     height: calc(15vh - 7vw);;
 }
-                        </pre>
-                    </div>  
+                            </pre>
+                        </div>  
+                    </div>
                 </div>
             </div>
         </main>
