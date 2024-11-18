@@ -85,7 +85,7 @@ pre {
 }
 
 .grey {
-    color: var(--light-grey);
+    color: var(--grey);
 }
 
 .underline {
@@ -198,8 +198,14 @@ menu ul li a:hover {
     padding-top: 0.5rem;
 }
 
-.submenu ul li a {
-    color: var(--light-grey);
+.submenu li a {
+    color: var(--grey);
+}
+
+.submenu li a:hover {
+    color: var(--white-wash);
+    text-decoration: none;
+    border: none;
 }
 
 .container {
@@ -246,10 +252,6 @@ menu ul li a:hover {
     min-height: 35vh;
 }
 
-.usage {
-    gap: 1rem;
-}
-
 .code-container {
     display: flex;
     flex-direction: column;
@@ -278,7 +280,7 @@ menu ul li a:hover {
     align-items: center;
     border: 0.5px solid var(--light-grey);
     border-radius: 6px;
-    padding: 3rem;
+    padding: 2rem 6rem;
     margin: 1rem 0;
     height: 100%;
 }
