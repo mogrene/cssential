@@ -433,6 +433,59 @@ button:hover {
     opacity: 1;
 }
 
+/* Checkbox */
+.checkbox-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox span {
+    width: 18px; 
+    height: 18px; 
+    border: 1.5px solid var(--white-wash); 
+    background-color: transparent; 
+    display: inline-block;
+    border-radius: 6px;
+    position: relative;
+    transition: background-color 0.2s ease;
+}
+  
+.checkbox span::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 11px;
+    border: solid var(--black-wash);
+    border-width: 0 1px 1px 0;
+    transform: rotate(45deg);
+    left: 5px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+  
+input[type="checkbox"]:checked + span {
+    background-color: var(--white-wash);
+}
+  
+input[type="checkbox"]:checked + span::after {
+    color: var(--black-wash);
+    opacity: 1;
+}
+
+#checkbox-label {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--white-wash);
+    padding: 0;
+}
+
 footer {
     position: fixed;
     right: 0;
