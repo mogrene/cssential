@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tooltip - CSSential</title>
+        <link rel="stylesheet" href="../../styles.css">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="/cssential" class="white">
+                    CSSential
+                </a>
+                <ul>
+                    <li><a href="/cssential/components/accordion/" class="white">Components</a></li>
+                    <li><a href="https://github.com/idematos/cssential" target="_blank">Code</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <menu>
+                <h5>Components</h5>
+                <ul>
+                    <li><a href="/cssential/components/accordion/">Accordion</a></li>
+                    <li><a href="/cssential/components/button/">Button</a>
+                    <li><a class="underline" href="/cssential/components/tooltip/">Tooltip</a> 
+                </ul>
+            </menu>
+            <div class="container">
+                <div class="navigation">
+                    <h6>Components</h6>
+                    <h6>/</h6>
+                    <h6 class="white">Tooltip</h6>
+                </div>
+                <h1>Tooltip</h1>
+                <h4>Display informative text hovering and focusing on an element.</h4>
+                <div class="preview">
+                    <div class="card">
+                        <div class="tooltip-container">
+                            <button class="outline">Hover me</button>
+                            <div class="tooltip">This is a tooltip</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="usage">
+                    <div class="code-container">
+                        <div class="code-content">
+                            <h5>HTML</h5>
+                            <div class="codebox">
+                                <pre>
+&lt;div class="tooltip-container"&gt;
+    &lt;button class="outline"&gt;Hover me&lt;/button&gt;
+    &lt;div class="tooltip"&gt;This is a tooltip&lt;/div&gt;
+&lt;/div&gt;
+                                </pre>
+                            </div>
+                        </div>
+
+                    <div class="code-content">
+                        <h5>CSS</h5>
+                        <div class="codebox">
+                            <pre>
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip {
+    visibility: hidden;
+    background-color: transparent;
+    color: var(--white-wash);
+    border: 0.5px solid var(--light-grey);
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 6px;
+
+    position: absolute;
+    bottom: 120%;
+    z-index: 1;
+
+    opacity: 0;
+    transition: opacity 0.5s;
+
+    font-size: 0.8rem;
+    font-weight: 300;
+    width: 130px;
+}
+
+.tooltip-container:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+                            </pre>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+    <footer>
+        <container>
+            <p>Built by <a href="https://github.com/idematos" target="_blank">idematos</a>. The source code is available on <a href="https://github.com/idematos/cssential" target="_blank">GitHub</a>.</p>
+        </container>
+    </footer>
+</html>
