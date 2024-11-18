@@ -30,6 +30,8 @@
                             <li><a class="grey" href="#primary">Primary</a></li>
                             <li><a class="grey" href="#secondary">Secondary</a></li>
                             <li><a class="grey" href="#outline">Outline</a></li>
+                            <li><a class="grey" href="#icon">Icon</a></li>
+                            <li><a class="grey" href="#with-icon">With Icon</a></li>
                         </ul>
                     </li> 
                 </ul>
@@ -75,7 +77,7 @@ button {
     border-radius: 6px;
     text-decoration: none;
     cursor: pointer;
-    padding: 0.5rem 1.3rem;
+    padding: 0.8em 1.2em;
 }
 
 button:hover {
@@ -125,7 +127,7 @@ button {
     border-radius: 6px;
     text-decoration: none;
     cursor: pointer;
-    padding: 0.5rem 1.3rem;
+    padding: 0.8em 1.2em;
 }
 
 button:hover {
@@ -175,17 +177,129 @@ button {
     border-radius: 6px;
     text-decoration: none;
     cursor: pointer;
-    padding: 0.5rem 1.3rem;
-}
-
-button:hover {
-    opacity: 0.9;
+    padding: 0.8em 1.2em;
 }
 
 .outline {
     background-color: transparent;
     color: white;
     border-color: white;
+}
+
+.outline:hover {
+    background-color: gray;
+}
+                                </pre>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Icon -->
+                <div class="preview">
+                    <h3 id="icon">Icon</h3>
+                    <div class="card">
+                        <button class="icon">
+                            <img src="../../media/icons/copy.svg" />
+                        </button>
+                    </div>
+                </div>
+
+                <div class="usage">
+                    <div class="code-container">
+                        <div class="code-content">
+                            <h5>HTML</h5>
+                            <div class="codebox">
+                                <pre>
+&lt;button class="icon"&gt;
+    &lt;img src="../../media/icons/copy.svg" /&gt;
+&lt;/button&gt;
+                                </pre>
+                            </div>
+                        </div>
+                        <div class="code-content">
+                            <h5>CSS</h5>
+                            <div class="codebox">
+                                <pre>
+button {
+    font-weight: 500;
+    border: 0.5px solid;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0.8em 1.2em;
+}
+
+.icon {
+    background-color: transparent;
+    border-color: gray;
+    padding: 1em;
+}
+
+.icon img {
+    height: 28px;
+    width: 28px;
+}
+
+.icon:hover {
+    background-color: gray;
+}
+                                </pre>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+
+                <!-- With Icon -->
+                <div class="preview">
+                    <h3 id="with-icon">With Icon</h3>
+                    <div class="card">
+                        <button class="with-icon">
+                            Next
+                            <img src="../../media/icons/arrow-right.svg" />
+                        </button>
+                    </div>
+                </div>
+
+                <div class="usage">
+                    <div class="code-container">
+                        <div class="code-content">
+                            <h5>HTML</h5>
+                            <div class="codebox">
+                                <pre>
+&lt;button class="with-icon"&gt;
+    Next
+    &lt;img src="../../media/icons/arrow-right.svg" /&gt;
+&lt;/button&gt;
+                                </pre>
+                            </div>
+                        </div>
+                        <div class="code-content">
+                            <h5>CSS</h5>
+                            <div class="codebox">
+                                <pre>
+button {
+    font-weight: 500;
+    border: 0.5px solid;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0.8em 1.2em;
+}
+
+.with-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: black;
+    border-color: white;
+    gap: 0.5em;
+}
+
+.with-icon img {
+    height: 18px;
+    width: 18px;
 }
                                 </pre>
                             </div>  

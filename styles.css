@@ -230,6 +230,8 @@ menu ul li a:hover {
 .button-container {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
     gap: 1.5rem;
     padding: 1rem 0;
 }
@@ -337,7 +339,7 @@ button, .button {
     border-radius: 6px;
     text-decoration: none;
     cursor: pointer;
-    padding: 0.7em 1.3em;
+    padding: 0.8em 1.2em;
 }
 
 button:hover {
@@ -359,10 +361,40 @@ button:hover {
 .outline {
     background-color: transparent;
     color: var(--white-wash);
-    border-color: var(--white-wash);
+    border-color: var(--light-grey);
 }
 
-#primary, #secondary, #outline {
+.icon {
+    background-color: transparent;
+    border-color: var(--light-grey);
+    padding: 0.8em;
+}
+
+.icon img {
+    height: 28px;
+    width: 28px;
+}
+
+.outline:hover, .icon:hover {
+    background-color: var(--lighter-grey);
+}
+
+.with-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white-wash);
+    color: var(--black-wash);
+    border-color: var(--white-wash);
+    gap: 0.5em;
+}
+
+.with-icon img {
+    height: 18px;
+    width: 18px;
+}
+
+#primary, #secondary, #outline, #icon, #with-icon {
     scroll-margin-top: 5rem;
 }
 
