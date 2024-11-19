@@ -159,7 +159,6 @@ main {
     flex-direction: row;
     overflow-y: scroll;
     min-height: 100vh;
-    border: 1px solid var(--light-grey);
 }
 
 menu {
@@ -169,7 +168,7 @@ menu {
     border: 0.5px solid var(--light-grey);
     height: 100%;
     background-color: var(--black-wash);
-    z-index: 1;
+    z-index: 0;
 }
 
 menu h5 {
@@ -211,13 +210,14 @@ menu ul li a:hover {
 
 .container {
     width: 100%;
-    padding: 5rem 2rem 5rem 15rem;
+    padding: 6rem 2rem 2rem 15rem;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
     gap: 0.5rem;
     min-height: 100vh;
+    border: 1px solid var(--light-grey);
 }
 
 .home {
@@ -281,7 +281,7 @@ menu ul li a:hover {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 0;
+    padding-top: 2rem;
     width: 100%;
 }
 
@@ -546,7 +546,7 @@ select:focus {
 }
 
 footer {
-    position: fixed;
+    position: block;
     right: 0;
     bottom: 0;
     width: 100%;
@@ -567,6 +567,8 @@ footer container {
     width: 100%;
     padding: 2rem;
     border: 1px solid var(--light-grey);
+    background-color: var(--black-wash);
+    z-index: 9;
 }
 
 footer p, a {
