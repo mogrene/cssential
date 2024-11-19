@@ -169,7 +169,6 @@ main {
     display: flex;
     flex-direction: row;
     overflow-y: scroll;
-    min-height: 100vh;
 }
 
 menu {
@@ -227,7 +226,6 @@ menu ul li a:hover {
     align-items: flex-start;
     flex-direction: column;
     gap: 0.5rem;
-    min-height: 100vh;
     border: 1px solid var(--light-grey);
 }
 
