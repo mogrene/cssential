@@ -117,6 +117,17 @@ nav {
     gap: 1.5rem
 }
 
+nav .logo {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+nav .logo img {
+    height: 1.3rem;
+    width: 1.3rem;
+}
+
 nav a {
     border: none;
     text-decoration: none;
