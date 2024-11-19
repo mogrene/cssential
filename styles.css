@@ -276,6 +276,15 @@ menu ul li a:hover {
     width: 100%;
 }
 
+.pagination-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+    width: 100%;
+}
+
 /* Card */
 .card {
     display: flex;
@@ -335,12 +344,16 @@ section {
 
 /* Button */
 button, .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-weight: 500;
     border: 0.5px solid;
     border-radius: 6px;
     text-decoration: none;
     cursor: pointer;
     padding: 0.8em 1.2em;
+    gap: 0.5em;
 }
 
 button:hover {
@@ -392,16 +405,12 @@ button:hover {
 }
 
 .with-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-color: var(--white-wash);
     color: var(--black-wash);
     border-color: var(--white-wash);
-    gap: 0.5em;
 }
 
-.with-icon img {
+.button img, button img {
     height: 18px;
     width: 18px;
 }
