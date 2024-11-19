@@ -452,7 +452,7 @@ input[type="checkbox"] {
     border: 1.5px solid var(--white-wash); 
     background-color: transparent; 
     display: inline-block;
-    border-radius: 6px;
+    border-radius: 4px;
     position: relative;
     transition: background-color 0.2s ease;
 }
@@ -484,6 +484,45 @@ input[type="checkbox"]:checked + span::after {
     font-weight: 300;
     color: var(--white-wash);
     padding: 0;
+}
+
+/* Dropdown */
+.dropdown-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.dropdown {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 6px;
+}
+  
+select {
+    display: inline-block;
+    padding: 0.8rem 1rem;
+    font-size: 1em;
+    color: var(--white-wash);
+    background-color: transparent;
+    border: 1px solid var(--light-grey);
+    border-radius: 6px;
+    cursor: pointer;
+}
+  
+.dropdown::after {
+    position: absolute;
+    right: 0;
+    font-size: 1em;
+    color: var(--white-wash);
+    cursor: pointer;
+}
+  
+select:focus {
+    border: 0.5px solid var(--white-wash);
+    outline: none;
 }
 
 footer {
