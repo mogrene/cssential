@@ -365,6 +365,17 @@ button:hover {
     border-color: var(--light-grey);
 }
 
+.ghost {
+    background-color: transparent;
+    color: var(--white-wash);
+    border-color: transparent;
+}
+
+.ghost:hover {
+    background-color: var(--lighter-grey);
+    border-color: var(--lighter-grey);
+}
+
 .icon {
     background-color: transparent;
     border-color: var(--light-grey);
@@ -395,7 +406,7 @@ button:hover {
     width: 18px;
 }
 
-#primary, #secondary, #outline, #icon, #with-icon {
+#primary, #secondary, #outline, #ghost, #icon, #with-icon {
     scroll-margin-top: 5rem;
 }
 
