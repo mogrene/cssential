@@ -230,6 +230,7 @@ menu ul li a:hover {
     align-items: flex-start;
     flex-direction: column;
     border: 0.5px solid var(--subtle-color);
+    gap: 0.5em;
 }
 
 .home {
@@ -253,7 +254,6 @@ menu ul li a:hover {
     display: flex;
     flex-direction: row;
     gap: 0.5em;
-    padding-bottom: 1rem;
 }
 
 .preview, .usage {
@@ -261,7 +261,7 @@ menu ul li a:hover {
     flex-direction: column;
     width: 100%;
     gap: 0.5rem;
-    margin: 1.5rem 0;
+    margin: 1rem 0;
 }
 
 .code-container {
@@ -558,6 +558,37 @@ select:focus {
     outline: none;
 }
 
+/* Toggle */
+.toggle {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.toggle-label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0.8em;
+    border: 0.5px solid transparent;
+    background-color: transparent;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.toggle-label:hover {
+    opacity: 0.6;
+}
+
+.toggle:checked ~ .toggle-label {
+    background-color: var(--subtler-color);
+    color: var(--highlight-color);
+    border-color: var(--subtler-color);
+    opacity: 1;
+}
+
 footer {
     position: block;
     right: 0;
@@ -648,6 +679,19 @@ footer p, a {
     height: 1.2rem;
     mask-image: url('media/icons/on-off.svg');
     -webkit-mask-image: url('media/icons/on-off.svg');
+    mask-size: contain;
+    -webkit-mask-size: contain;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    background-color: var(--highlight-color);
+}
+
+.italic-icon {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    mask-image: url('media/icons/italic.svg');
+    -webkit-mask-image: url('media/icons/italic.svg');
     mask-size: contain;
     -webkit-mask-size: contain;
     mask-repeat: no-repeat;
