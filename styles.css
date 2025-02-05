@@ -15,7 +15,7 @@ body {
     --font-text: Helvetica, sans-serif;
     --font-code: Courier, monospace;
 
-    line-height: 1.5;
+    line-height: 1.6;
     letter-spacing: 0.7px;
     margin: 0;
     padding: 0;
@@ -102,6 +102,10 @@ pre {
     font-weight: 500;
 }
 
+.hide-on-desktop {
+    display: none;
+}
+
 header {
     position: fixed;
     left: 0;
@@ -118,7 +122,7 @@ nav {
     list-style: none;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     max-width: 1280px;
@@ -239,6 +243,7 @@ menu ul li a:hover {
 
 .hero {
     padding-top: 2rem;
+    max-width: 620px;
 }
 
 .button-container {
@@ -634,6 +639,32 @@ footer p, a {
     background-color: var(--highlight-color);
 }
 
+.menu-icon {
+    display: inline-block;
+    width: 1.3rem;
+    height: 1.3rem;
+    mask-image: url('media/icons/menu.svg');
+    -webkit-mask-image: url('media/icons/menu.svg');
+    mask-size: contain;
+    -webkit-mask-size: contain;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    background-color: var(--highlight-color);
+}
+
+.github-icon {
+    display: inline-block;
+    width: 1.3rem;
+    height: 1.3rem;
+    mask-image: url('media/icons/github.svg');
+    -webkit-mask-image: url('media/icons/github.svg');
+    mask-size: contain;
+    -webkit-mask-size: contain;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    background-color: var(--highlight-color);
+}
+
 .plus-icon {
     display: inline-block;
     width: 1.2rem;
@@ -714,16 +745,138 @@ footer p, a {
     }
 }
 
-@media (max-width: 1280px) {
-    menu {
+@media (max-width: 780px) {
+    h1 {
+        font-size: 1.7rem;
+        margin: 1rem 0;
+        line-height: 1.2;
+    }
+
+    h2 {
+        font-size: 1.05rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    h4 {
+        font-size: 0.95rem;
+    }
+
+    h5 {
+        font-size: 1rem;
+    }
+
+    h6 {
+        font-size: 0.8rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    a {
+        font-size: 0.8rem;
+    }
+
+    .hero {
+        padding-top: 1rem;
+    }
+
+    .hide-on-desktop {
+        display: inline;
+    }
+
+    .hide-on-mobile {
         display: none;
     }
 
+    nav {
+        justify-content: space-between;
+        padding: 1rem;
+    }
+
+    .menu-button {
+        display: flex;
+    }
+
+    menu {
+        position: fixed;
+        bottom: -100%;
+        left: 50%;
+        transform: translate(-50%, 100%);
+        height: 160vh;
+        width: 100%;
+        background: var(--background-color);
+        padding: 2rem 1rem;
+        border-radius: 10px 10px 0 0;
+        transition: transform 0.5s ease-in-out;
+        overflow-y: scroll;
+        z-index: 999;
+    }
+
+    menu ul, menu a {
+        gap: 0.8rem;
+        padding: 0.3rem 0;
+    }
+
+    menu ul li a { 
+        font-size: 0.95rem;
+        color: var(--text-color);
+    }
+
+    .menu-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+        z-index: 999;
+    }
+
+    #menu:target {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    #menu:target menu {
+        transform: translate(-50%, 0);
+    }
+
+    .absolute-link {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 999;
+    }
+
     .container {
-        padding: 5rem 2rem;
+        padding: 5rem 1rem;
+        border-bottom: none;
     }
 
     .preview {
         min-height: 55vh;
+    }
+
+    footer {
+        position: relative;
+        height: 15vh;
+        z-index: -1;
+    }
+
+    footer container {
+        justify-content: center;
+        text-align: center;
+        padding: 2rem 1rem;
+        border-top: 0.5px solid var(--subtle-color);
+        z-index: -1;
     }
 }
