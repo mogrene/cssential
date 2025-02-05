@@ -11,15 +11,50 @@
     <body>
         <header>
             <nav>
-                <a href="/" class="logo-container highlight">
-                    <div class="logo-icon"></div>
-                    CSSential
-                </a>
+                <ul class="hide-on-mobile">
+                    <li>
+                        <a href="/" class="logo-container highlight">
+                            <div class="logo-icon"></div>
+                            CSSential
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/components/accordion/">Components</a>
+                    </li>
+                </ul>
+
+                <ul class="hide-on-desktop">
+                    <li>
+                        <a href="#menu" class="menu-button">
+                            <div class="menu-icon"></div>
+                        </a>
+                    </li>
+                </ul>
+
                 <ul>
-                    <li><a href="/components/accordion/" class="highlight">Components</a></li>
-                    <li><a href="https://github.com/mogrene/cssential" target="_blank">Code</a></li>
+                    <li>
+                        <a class="logo-container" href="https://github.com/mogrene/cssential" target="_blank">
+                            <div class="github-icon"></div>
+                        </a>
+                    </li>
                 </ul>
             </nav>
+
+            <div id="menu" class="menu-container hide-on-desktop">
+                <a href="#" class="absolute-link"></a>
+                <menu>
+                    <a href="/"><h5>Home</h5></a>
+                    <a href="/components/accordion/"><h5>Components</h5></a>
+                    <ul>
+                        <li><a href="/components/accordion/">Accordion</a></li>
+                        <li><a href="/components/button/">Button</a></li>
+                        <li><a href="/components/checkbox/">Checkbox</a>
+                        <!-- <li><a href="/components/dropdown/">Dropdown</a> -->
+                        <li><a href="/components/toggle/">Toggle</a>
+                        <li><a href="/components/tooltip/">Tooltip</a> 
+                    </ul>
+                </menu>
+            </div>
         </header>
 
         <main>
