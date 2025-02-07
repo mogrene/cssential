@@ -181,7 +181,7 @@ main {
 
 menu {
     position: fixed;
-    padding: 5rem 2rem;
+    padding: 5rem 1rem;
     min-width: 200px;
     border: 0.5px solid var(--subtle-color);
     height: 100%;
@@ -190,6 +190,7 @@ menu {
 }
 
 menu h5 {
+    padding: 0.25rem 0.5rem;
     margin-bottom: 0.5rem;
 }
 
@@ -198,17 +199,36 @@ menu ul {
     flex-direction: column;
     list-style: none;
     gap: 0.2rem;
+    width: 100%;
 }
 
-menu ul li a {
+menu ul a {
+    width: 100%;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+}
+
+menu ul a li {
+    font-weight: 300;
     text-decoration: none;
     border: none;
     color: var(--highlight-color);
+    padding: 0.25rem 0.5rem;
+    width: 100%;
 }
 
-menu ul li a:hover {
-    border-bottom: 0.5px solid;
+menu ul a:hover {
+    background-color: var(--subtle-color);
     opacity: 1;
+}
+
+menu ul a .selected {
+    font-weight: 500;
+    padding: 0.25rem 0.5rem;
+    background-color: var(--subtle-color);
+    border-radius: 6px;
+    width: 100%;
 }
 
 .submenu {
@@ -748,7 +768,7 @@ footer p, a {
 @media (max-width: 780px) {
     h1 {
         font-size: 1.7rem;
-        margin: 1rem 0;
+        margin: 0.75rem 0 0.25rem 0;
         line-height: 1.2;
     }
 
@@ -809,21 +829,26 @@ footer p, a {
         height: 150vh;
         width: 100%;
         background: var(--background-color);
-        padding: 2rem 1rem;
+        padding: 2rem 1.5rem;
         border-radius: 10px 10px 0 0;
         transition: transform 0.5s ease-in-out;
         overflow-y: scroll;
         z-index: 999;
     }
 
-    menu ul, menu a {
-        gap: 0.8rem;
-        padding: 0.3rem 0;
+    menu h5 {
+        padding: 0.25rem 0;
     }
 
-    menu ul li a { 
-        font-size: 0.95rem;
-        color: var(--text-color);
+    menu ul {
+        gap: 0.75rem;
+        padding: 0.25rem 0;
+    }
+
+    menu a {
+        font-size: 1rem;
+        text-decoration: none;
+        border: none;
     }
 
     .menu-container {
