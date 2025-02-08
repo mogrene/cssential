@@ -244,6 +244,7 @@ menu ul a .selected {
     color: var(--highlight-color);
     text-decoration: none;
     border: none;
+    background-color: var(---background-color);
 }
 
 .container {
